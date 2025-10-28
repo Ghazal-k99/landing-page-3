@@ -1,0 +1,29 @@
+:root {
+    /* --font-74px: 74px;text-7xl
+    --font-48px: 48px;text-5xl
+    --font-40px: 40px;text-4xl
+    --font-22px: 22px;text-xl
+    --font-20px: 20px;text-xl
+    --font-18px: 18px;text-lg
+    --font-16px: 16px;text-base
+
+    --font-weight-600: 600;font-semibold
+    --font-weight-700: 700;font-bold
+    --font-weight-800: 800;font-extrabold */
+
+    --color-dark: #2B1B12;
+    --color-semi-dark: #4F3527;
+    --color-accent: #DDC7BB;
+    --color-light: #FEF7F2;
+    --color-brown: #695346;
+
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-dark);
+}
+
+.why-choose-us-card{
+    max-width: 300px;
+}

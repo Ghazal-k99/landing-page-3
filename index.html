@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <header class=" bg-[#FEF7F2]">
+    <nav aria-label="Global" class="mx-auto flex container items-center justify-between p-6 ">
+        <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="./assets/svg/nav-logo.svg" alt="" class="h-8 w-auto" />
+        </a>
+        </div>
+        <div class="flex lg:hidden">
+        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        </div>
+        <el-popover-group class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="text-lg font-bold text-gray-900">Home</a>
+            <a href="#" class="text-lg font-bold text-gray-900">Service</a>
+            <a href="#" class="text-lg font-bold text-gray-900">Agents</a>
+            <a href="#" class="text-lg font-bold text-gray-900">Contact</a>
+        </el-popover-group>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-x-12">
+            <img src="./assets/svg/search-icon.svg" alt="search">
+            <img src="./assets/svg/profile-icon.svg" alt="profile">
+            <button class="bg-[#2b1b12] hover:bg-[#3a261b] text-white text-lg font-semibold px-6 py-3 rounded-lg ">
+                Sign up
+            </button>
+        </div>
+    </nav>
+    <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img src="./assets/svg/nav-logo.svg" alt="logo" class="h-8 w-auto" />
+                </a>
+                <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                    <div class="-mx-3">
+                        <el-disclosure id="products" hidden class="mt-2 block space-y-2">
+                            <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
+                            <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Service</a>
+                            <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Agents</a>
+                            <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
+                        </el-disclosure>
+                    </div>
+                </div>
+                <div class="py-6">
+                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
+                </div>
+                </div>
+            </div>
+            </el-dialog-panel>
+        </div>
+        </dialog>
+    </el-dialog>
+    </header>
+
+    <main>
+
+        <!-- hero -->
+
+        <div class="hero-sec bg-[#FEF7F2] flex flex-col justify-center items-center ">
+            <div class="hero-content container mx-auto grid grid-cols-1 xl:grid-cols-[40%_60%] items-center justify-center ">
+                <div class="hero-text flex flex-col justify-center items-center lg:items-start lg:text-left text-center gap-12">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold ">
+                    Find Your Dream Home
+                    </h1>
+                    <p class="text-lg font-bold">
+                    Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision.
+                    </p>
+                    <button class="bg-[#2b1b12] hover:bg-[#3a261b] text-white text-lg font-semibold px-6 py-3 rounded-lg">
+                    Sign up
+                    </button>
+                </div>
+                <div class="hero-img flex justify-center lg:justify-end items-center">
+                    <img src="./assets/images/hero-img.png" alt="hero"  />
+                </div>
+            </div>    
+           
+        </div>
+         <div class="hero-form bg-[#DDC7BB] container mx-auto max-w-6xl flex flex-col gap-6 md:flex-row lg:justify-between items-center w-auto px-6 py-12  rounded-2xl  md:-translate-y-1/2 ">
+            <div class="flex flex-col w-full md:flex-row gap-6">
+                <input
+                type="text"
+                name="Location"
+                placeholder="Location"
+                class=" w-full lg:max-w-sm rounded-md text-lg font-bold text-[var(--color-dark)] placeholder-[var(--color-brown)] bg-white bg-[url('./assets/svg/location-icon.svg')] bg-no-repeat bg-[length:20px_20px] bg-[right_10px_top_15px] pl-3 pr-10 py-3 focus:outline-none focus:border-gray-500"
+                />
+                <input
+                type="text"
+                name="Type"
+                placeholder="Type"
+                class="w-full lg:max-w-sm rounded-md text-lg font-bold text-[var(--color-dark)] placeholder-[var(--color-brown)] bg-white bg-[url('./assets/svg/type-icon.svg')] bg-no-repeat bg-[length:20px_20px] bg-[right_10px_top_15px] pl-3 pr-10 py-3 focus:outline-none focus:border-gray-500"
+                />
+                <input
+                type="text"
+                name="Price Range"
+                placeholder="Price Range"
+                class="w-full lg:max-w-sm rounded-md text-lg font-bold text-[var(--color-dark)] placeholder-[var(--color-brown)] bg-white bg-[url('./assets/svg/price-range-icon.svg')] bg-no-repeat bg-[length:20px_20px] bg-[right_10px_top_15px] pl-3 pr-10 py-3 focus:outline-none focus:border-gray-500"
+                />
+            </div> 
+            <div>   
+                <button class="bg-[#2b1b12] hover:bg-[#3a261b] text-white text-lg font-semibold px-6 py-3 rounded-lg">
+                    Signup
+                </button>
+            </div>    
+        </div>
+    
+        <!-- We Help You To Find Your Dream Home -->
+
+        <div class="we-help-you-to-find-your-dream-home-sec container mx-auto grid grid-cols-1 lg:grid-cols-2 items-start justify-center gap-24 py-[100px]">
+            <div class="hero-img flex justify-center lg:justify-end items-center">
+                <img src="./assets/images/we-help-you-to-find-your-dream-home-sec-img.png" alt="luxcury home" class="rounded-2xl" />
+            </div>
+            <div class="hero-text w-[470px] flex flex-col justify-center text-center lg:text-left items-center md:items-start text-left gap-12">
+                <h2 class="text-4xl md:text-4xl font-extrabold ">
+                We Help You To Find Your Dream Home
+                </h2>
+                <p class="text-lg font-bold text-[var(--color-semi-dark)]">
+                From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality
+                </p>
+                <div class="flex text-[var(--color-semi-dark)] gap-6">
+                <div>
+                    <h5 class="text-5xl font-bold">8K+</h5>
+                    <p class="text-lg font-semibold">Houses Available</p>
+                </div>
+                <div>
+                    <h5 class="text-5xl font-bold">6K+</h5>
+                    <p class="text-lg font-semibold">Houses Sold</p>
+                </div>
+                 <div>
+                    <h5 class="text-5xl font-bold">2K+</h5>
+                    <p class="text-lg font-semibold">Trusted Agents</p>
+                </div>
+            </div>    
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+
+        <section class="why-choose-us-sec flex flex-col gap-10 container mx-auto">
+            <div class="section-header flex flex-col justify-center items-center gap-5">
+                <h2 class="text-4xl md:text-4xl font-extrabold ">Why Choose Us</h2>
+                <p class="text-lg font-bold lg:w-[550px] text-center">Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service</p>
+            </div>    
+            <div class="why-choose-us-list flex flex-wrap justify-center gap-6 md:justify-between items-center">
+                <div class="why-choose-us-card bg-[var(--color-accent)] flex flex-col p-8 rounded-2xl gap-6">
+                    <img src="./assets/svg/expert-guidance-icon.svg" alt="icon" width="80px" class="bg-white rounded-lg p-3">
+                    <h5 class="text-lg font-bold">Expert Guidance</h5>
+                    <p class="text-base font-semibold text-[var(--color-semi-dark)]">Benefit from our team's seasoned expertise for a smooth buying experience</p>
+                </div>
+                   <div class="why-choose-us-card bg-[var(--color-accent)] flex flex-col p-8 rounded-2xl gap-6">
+                    <img src="./assets/svg/personalized -service-icon.svg" alt="icon" width="80px" class="bg-white rounded-lg p-3">
+                    <h5 class="text-lg font-bold">Personalized Service</h5>
+                    <p class="text-base font-semibold text-[var(--color-semi-dark)]">Our services adapt to your unique needs, making your journey stress-free</p>
+                </div>
+                   <div class="why-choose-us-card bg-[var(--color-accent)] flex flex-col p-8 rounded-2xl gap-6">
+                    <img src="./assets/svg/transparent-process-icon.svg" alt="icon" width="80px" class="bg-white rounded-lg p-3">
+                    <h5 class="text-lg font-bold">Transparent Process</h5>
+                    <p class="text-base font-semibold text-[var(--color-semi-dark)]">Stay informed with our clear and honest approach to buying your home</p>
+                </div>
+                   <div class="why-choose-us-card bg-[var(--color-accent)] flex flex-col p-8 rounded-2xl gap-6">
+                    <img src="./assets/svg/exceptional-support-icon.svg" alt="icon" width="80px" class="bg-white rounded-lg p-3">
+                    <h5 class="text-lg font-bold">Exceptional Support</h5>
+                    <p class="text-base font-semibold text-[var(--color-semi-dark)]">Providing peace of mind with our responsive and attentive customer service</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Popular Residences -->
+
+        <section class="our-popular-residences flex flex-col gap-10 py-[100px]">
+            <h2 class="flex justify-center items-center text-4xl md:text-4xl font-extrabold">Our Popular Residences</h2>
+            <div class="our-popular-residences-list flex flex-wrap justify-center gap-6 md:justify-between items-center container mx-auto">
+                <div class="our-popular-residences-card bg-[var(--color-accent)] rounded-2xl overflow-hidden">
+                    <img src="./assets/images/San Francisco.png" alt="San Francisco" >
+                    <div class="card-content flex flex-col gap-6 p-6">
+                        <div class="location flex gap-2">
+                            <img src="./assets/svg/location-icon2.svg" alt="location">
+                            <p class="text-xl font-bold">San Francisco, California</p>
+                        </div>
+                        <div class="features flex gap-10 text-[var(--color-semi-dark)]">
+                            <div class="flex gap-2">
+                                <img src="./assets/svg/rooms-icon.svg" alt="rooms icon" class="bg-white rounded-md">
+                                <p class="text-lg font-semibold">4 Rooms</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <img src="./assets/svg/space-icon.svg" alt="space icon" class="bg-white rounded-md">
+                                <p class="text-lg font-semibold">3,500 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between justify-center items-center">
+                            <button class="bg-[#2b1b12] hover:bg-[#3a261b] text-white text-lg font-semibold px-6 py-3 rounded-lg">
+                                Sign up
+                            </button>
+                            <p class="text-xl font-bold text-[var(--color-semi-dark)]">$2,500,000</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="our-popular-residences-card bg-[var(--color-accent)] rounded-2xl overflow-hidden">
+                    <img src="./assets/images/Beverly Hills.png" alt="Beverly Hills"  >
+                    <div class="card-content flex flex-col gap-6 p-6">
+                        <div class="location flex gap-2">
+                            <img src="./assets/svg/location-icon2.svg" alt="location">
+                            <p class="text-xl font-bold">Beverly Hills, California</p>
+                        </div>
+                        <div class="features flex gap-10 text-[var(--color-semi-dark)]">
+                            <div class="flex gap-2">
+                                <img src="./assets/svg/rooms-icon.svg" alt="rooms icon" class="bg-white rounded-md">
+                                <p class="text-lg font-semibold">3 Rooms</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <img src="./assets/svg/space-icon.svg" alt="space icon" class="bg-white rounded-md">
+                                <p class="text-lg font-semibold">1,500 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between justify-center items-center">
+                            <button class="bg-[#2b1b12] hover:bg-[#3a261b] text-white text-lg font-semibold px-6 py-3 rounded-lg">
+                                Sign up
+                            </button>
+                            <p class="text-xl font-bold text-[var(--color-semi-dark)]">$850,000</p>
+                        </div>
+                    </div>    
+                </div>
+                  <div class="our-popular-residences-card bg-[var(--color-accent)] rounded-2xl overflow-hidden">
+                    <img src="./assets/images/Palo Alto.png" alt="Palo Alto" >
+                    <div class="card-content flex flex-col gap-6 p-6">
+                        <div class="location flex gap-2">
+                            <img src="./assets/svg/location-icon2.svg" alt="location">
+                            <p class="text-xl font-bold">Palo Alto, California</p>
+                        </div>
+                        <div class="features flex gap-10 text-[var(--color-semi-dark)]">
+                            <div class="flex gap-2">
+                                <img src="./assets/svg/rooms-icon.svg" alt="rooms icon" class="bg-white rounded-md">
+                                <p class="text-lg font-semibold">6 Rooms</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <img src="./assets/svg/space-icon.svg" alt="space icon" class="bg-white rounded-md">
+                                <p class="text-lg font-semibold">4,000 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between justify-center items-center">
+                            <button class="bg-[#2b1b12] hover:bg-[#3a261b] text-white text-lg font-semibold px-6 py-3 rounded-lg">
+                                Sign up
+                            </button>
+                            <p class="text-xl font-bold text-[var(--color-semi-dark)]">$3,700,000</p>
+                        </div>
+                    </div>    
+                </div>
+        </section>
+
+        <!-- What People Say About Dwello -->
+  
+        <section class="what-people-say-about-dwello-sec bg-[var(--color-light)] py-8">
+            <div class="what-people-say-about-dwello-content container mx-auto">
+                <div class="flex justify-center items-center">   
+                <h2 class="w-[400px] flex justify-center items-center text-center text-4xl md:text-4xl font-extrabold mb-8">
+                    What People Say About Dwello
+                </h2>
+                </div>
+
+                <!-- Swiper Container -->
+                <div class="swiper what-people-say-about-dwello-list">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                    <div class="rounded-2xl overflow-hidden bg-white shadow-lg">
+                        <img src="./assets/images/Sarah Nguyen.png" alt="Sarah Nguyen" class="object-cover w-full h-64">
+                        <div class="bg-[var(--color-accent)] w-full p-6 flex flex-col gap-4">
+                        <div class="flex justify-between items-center">
+                            <div class="information flex items-center gap-3">
+                            <img src="./assets/images/sarah-img.png" alt="sarah" class="rounded-full w-12 h-12 object-cover">
+                            <div>
+                                <h5 class="text-xl font-bold">Sarah Nguyen</h5>
+                                <p class="text-base font-semibold text-[var(--color-dark)]">San Francisco</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center bg-white gap-2 p-1 rounded-md">
+                            <img src="./assets/svg/star.svg" alt="star" width="20px">
+                            <p class="font-semibold text-[var(--color-dark)]">5.0</p>
+                            </div>
+                        </div>
+                        <p class="text-base font-semibold text-[var(--color-semi-dark)]">
+                            Dwello truly cares about their clients. They listened to my needs and preferences and helped me find the perfect home in the Bay Area. Their professionalism and attention to detail are unmatched.
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                    <div class="rounded-2xl overflow-hidden bg-white shadow-lg">
+                        <img src="./assets/images/Michael Rodriguez.png" alt="Michael Rodriguez" class="object-cover w-full h-64">
+                        <div class="bg-[var(--color-accent)] p-6 flex flex-col gap-4 w-full">
+                        <div class="flex justify-between items-center">
+                            <div class="information flex items-center gap-3">
+                            <img src="./assets/images/michael-img.png" alt="sarah" class="rounded-full w-12 h-12 object-cover">
+                            <div>
+                                <h5 class="text-xl font-bold">Michael Rodriguez</h5>
+                                <p class="text-base font-semibold text-[var(--color-dark)]">San Diego</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center bg-white gap-2 p-1 rounded-md">
+                            <img src="./assets/svg/star.svg" alt="star" width="20px">
+                            <p class="font-semibold text-[var(--color-dark)]">4.5</p>
+                            </div>
+                        </div>
+                        <p class="text-base font-semibold text-[var(--color-semi-dark)]">
+                            I had a fantastic experience working with Dwello. Their expertise and personalized service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                    <div class="rounded-2xl overflow-hidden bg-white shadow-lg">
+                        <img src="./assets/images/Emily Johnson.png" alt="Emily Johnson" class="object-cover w-full h-64">
+                        <div class="bg-[var(--color-accent)] p-6 flex flex-col gap-4 w-full">
+                        <div class="flex justify-between items-center">
+                            <div class="information flex items-center gap-3">
+                            <img src="./assets/images/emily-img.png" alt="sarah" class="rounded-full w-12 h-12 object-cover">
+                            <div>
+                                <h5 class="text-xl font-bold">Emily Johnson</h5>
+                                <p class="text-base font-semibold text-[var(--color-dark)]">Los Angeles</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center bg-white gap-2 p-1 rounded-md">
+                            <img src="./assets/svg/star.svg" alt="star" width="20px">
+                            <p class="font-semibold text-[var(--color-dark)]">5.0</p>
+                            </div>
+                        </div>
+                        <p class="text-base font-semibold text-[var(--color-semi-dark)]">
+                            Dwello made my dream of owning a home a reality! Their team provided exceptional support and guided me through every step of the process. I couldn't be happier with my new home!
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Arrows -->
+                <div class="arrow flex justify-center items-center gap-12 mt-8">
+                <img src="./assets/svg/left-arrow.svg" alt="left arrow" id="nextBtn" class="cursor-pointer bg-[var(--color-dark)] rounded-full px-5 py-4">
+                <img src="./assets/svg/right-arrow.svg" alt="right arrow" id="prevBtn" class="cursor-pointer bg-[var(--color-dark)] rounded-full px-5 py-4">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Do You Have Any Questions? -->
+
+        <section class="do-you-have-any-question-sec flex flex-col gap-10 justify-center items-center py-[100px]">
+            <h2 class="flex justify-center items-center text-4xl md:text-4xl font-extrabold mb-8 text-center">Do You Have Any Questions?<br> Get Help From Us</h2>
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex gap-2">
+                    <img src="./assets/svg/check-icon.svg" alt="check icon">
+                    <p class="text-lg font-bold text-[#543E32]">Chat live with our support team</p>
+                </div>
+                <div class="flex gap-2">
+                    <img src="./assets/svg/check-icon.svg" alt="check icon">
+                    <p class="text-lg font-bold text-[#543E32]">Browse our FAQ</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4">
+                <input
+                type="email"
+                name="email address"
+                placeholder="Enter your email address..."
+                class="bg-[var(--color-accent)] rounded-md text-base text-lg font-bold text-[var(--color-dark)] placeholder-[var(--color-brown)] bg-[url('./assets/svg/mail-icon.svg')] bg-no-repeat bg-[length:20px_20px] bg-[10px_15px] pl-10 pr-5 py-3 focus:outline-none focus:border-gray-500 w-[500px]"
+                />
+                <button class="bg-[#2b1b12] hover:bg-[#3a261b] text-white font-medium px-6 py-3 rounded-lg transition">
+                    Submit
+                 </button>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[var(--color-accent)]">
+        <div class="footer-content container mx-auto flex flex-col md:flex-row justify-between md:items-start items-center font-bold text-center md:text-left gap-12 py-[100px]">
+            <div class="flex flex-col gap-6">
+                <img src="./assets/svg/nav-logo.svg" alt="logo" width="100px">
+                <p>Bringing you closer to <br> your dream home, one <br> click at a time.</p>
+            </div>
+            <div class="flex flex-col gap-6">
+                <h5 class="text-xl">About</h5>
+                <p>Our Story</p>
+                <p>Careers</p>
+                <p>Our Team</p>
+                <p>Resources</p>
+            </div>
+            <div class="flex flex-col gap-6">
+                <h5 class="text-xl">Support</h5>
+                <p>FAQ</p>
+                <p>Contact Us</p>
+                <p>Help Center</p>
+                <p>Terms of Service</p>
+            </div>
+            <div class="flex flex-col gap-6">
+                <h5 class="text-xl">Find Us</h5>
+                <p>Events</p>
+                <p>Locations</p>
+                <p>Newsletter</p>
+            </div>
+            <div class="flex flex-col gap-6">
+                <h5 class="text-xl">Our Social</h5>
+                <div class="flex gap-4">  
+                    <img src="./assets/svg/instagram-icon.svg" alt="instagram">
+                    <p>Instagram</p>
+                </div>
+                <div class="flex gap-4">      
+                    <img src="./assets/svg/facebook-icon.svg" alt="facebook">
+                    <p>Facebook</p>
+                </div>
+                <div class="flex gap-4">    
+                    <img src="./assets/svg/x-icon.svg" alt="x">
+                    <p>Twitter (x)</p>
+                </div>
+            </div> 
+        </div>   
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</body>
+</html>
