@@ -88,8 +88,8 @@
 
         <div class="hero-sec bg-[#FEF7F2] flex flex-col justify-center items-center ">
             <div class="hero-content container mx-auto grid grid-cols-1 xl:grid-cols-[40%_60%] items-center justify-center ">
-                <div class="hero-text flex flex-col justify-center items-center lg:items-start lg:text-left text-center gap-12">
-                    <h1 class="text-5xl lg:text-7xl font-extrabold ">
+                <div class="hero-text flex flex-col justify-center items-center xl:items-start xl:text-left text-center gap-12">
+                    <h1 class="text-5xl xl:text-7xl font-extrabold ">
                     Find Your Dream Home
                     </h1>
                     <p class="text-lg font-bold">
@@ -135,18 +135,19 @@
     
         <!-- We Help You To Find Your Dream Home -->
 
-        <div class="we-help-you-to-find-your-dream-home-sec container mx-auto grid grid-cols-1 lg:grid-cols-2 items-start justify-center gap-24 py-[100px]">
+        <section class="we-help-you-to-find-your-dream-home-sec container mx-auto grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-24 py-[100px]">
             <div class="hero-img flex justify-center lg:justify-end items-center">
                 <img src="./assets/images/we-help-you-to-find-your-dream-home-sec-img.png" alt="luxcury home" class="rounded-2xl" />
             </div>
-            <div class="hero-text w-[470px] flex flex-col justify-center text-center lg:text-left items-center md:items-start text-left gap-12">
-                <h2 class="text-4xl md:text-4xl font-extrabold ">
+
+            <div class="sec-text w-full lg:w-[470px] flex flex-col justify-center items-center text-center lg:items-start lg:text-left gap-12">
+                <h2 class="text-4xl md:text-4xl font-extrabold">
                 We Help You To Find Your Dream Home
                 </h2>
-                <p class="text-lg font-bold text-[var(--color-semi-dark)]">
+                <p class="text-lg font-bold text-[var(--color-semi-dark)] max-w-[500px]">
                 From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality
                 </p>
-                <div class="flex text-[var(--color-semi-dark)] gap-6">
+                <div class="flex flex-wrap justify-center lg:justify-start text-[var(--color-semi-dark)] gap-6">
                 <div>
                     <h5 class="text-5xl font-bold">8K+</h5>
                     <p class="text-lg font-semibold">Houses Available</p>
@@ -155,13 +156,14 @@
                     <h5 class="text-5xl font-bold">6K+</h5>
                     <p class="text-lg font-semibold">Houses Sold</p>
                 </div>
-                 <div>
+                <div>
                     <h5 class="text-5xl font-bold">2K+</h5>
                     <p class="text-lg font-semibold">Trusted Agents</p>
                 </div>
-            </div>    
+                </div>
             </div>
-        </div>
+        </section>
+
 
         <!-- Why Choose Us -->
 
@@ -170,7 +172,7 @@
                 <h2 class="text-4xl md:text-4xl font-extrabold ">Why Choose Us</h2>
                 <p class="text-lg font-bold lg:w-[550px] text-center">Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service</p>
             </div>    
-            <div class="why-choose-us-list flex flex-wrap justify-center gap-6 md:justify-between items-center">
+            <div class="why-choose-us-list flex flex-wrap justify-center gap-6 lg:justify-between items-center">
                 <div class="why-choose-us-card bg-[var(--color-accent)] flex flex-col p-8 rounded-2xl gap-6">
                     <img src="./assets/svg/expert-guidance-icon.svg" alt="icon" width="80px" class="bg-white rounded-lg p-3">
                     <h5 class="text-lg font-bold">Expert Guidance</h5>
@@ -197,8 +199,8 @@
         <!-- Our Popular Residences -->
 
         <section class="our-popular-residences flex flex-col gap-10 py-[100px]">
-            <h2 class="flex justify-center items-center text-4xl md:text-4xl font-extrabold">Our Popular Residences</h2>
-            <div class="our-popular-residences-list flex flex-wrap justify-center gap-6 md:justify-between items-center container mx-auto">
+            <h2 class="flex justify-center items-center text-4xl md:text-4xl font-extrabold text-center">Our Popular Residences</h2>
+            <div class="our-popular-residences-list flex flex-wrap justify-center gap-6 xl:justify-between items-center container mx-auto">
                 <div class="our-popular-residences-card bg-[var(--color-accent)] rounded-2xl overflow-hidden">
                     <img src="./assets/images/San Francisco.png" alt="San Francisco" >
                     <div class="card-content flex flex-col gap-6 p-6">
@@ -395,7 +397,7 @@
                 type="email"
                 name="email address"
                 placeholder="Enter your email address..."
-                class="bg-[var(--color-accent)] rounded-md text-base text-lg font-bold text-[var(--color-dark)] placeholder-[var(--color-brown)] bg-[url('./assets/svg/mail-icon.svg')] bg-no-repeat bg-[length:20px_20px] bg-[10px_15px] pl-10 pr-5 py-3 focus:outline-none focus:border-gray-500 w-[500px]"
+                class="bg-[var(--color-accent)] rounded-md text-base text-lg font-bold text-[var(--color-dark)] placeholder-[var(--color-brown)] bg-[url('./assets/svg/mail-icon.svg')] bg-no-repeat bg-[length:20px_20px] bg-[10px_15px] pl-10 pr-5 py-3 focus:outline-none focus:border-gray-500 xl:w-[500px]"
                 />
                 <button class="bg-[#2b1b12] hover:bg-[#3a261b] text-white font-medium px-6 py-3 rounded-lg transition">
                     Submit
@@ -404,7 +406,7 @@
         </section>
     </main>
     <footer class="bg-[var(--color-accent)]">
-        <div class="footer-content container mx-auto flex flex-col md:flex-row justify-between md:items-start items-center font-bold text-center md:text-left gap-12 py-[100px]">
+        <div class="footer-content container mx-auto flex flex-wrap flex-col md:flex-row justify-between md:items-start items-center font-bold text-center md:text-left gap-12 py-[100px]">
             <div class="flex flex-col gap-6">
                 <img src="./assets/svg/nav-logo.svg" alt="logo" width="100px">
                 <p>Bringing you closer to <br> your dream home, one <br> click at a time.</p>
